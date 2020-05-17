@@ -136,9 +136,9 @@ class AppleNotesEmbeddedTable < AppleNotesEmbeddedObject
       target_dictionary_object.dictionary.element.each do |row|
         current_row = get_target_uuid_from_object_entry(@table_objects[row.key.object_index])
         target_cell = @table_objects[row.value.object_index]
-        #puts "Current row: #{current_row}, Current column: #{current_column}"
-        #puts "Total rows: #{@total_rows}, Total columns: #{@total_columns}"
-        #puts "#{@row_indices[current_row]}, #{@column_indices[current_column]}"
+        puts "Current row: #{current_row}, Current column: #{current_column}"
+        puts "Total rows: #{@total_rows}, Total columns: #{@total_columns}"
+        puts "#{@row_indices[current_row]}, #{@column_indices[current_column]}"
         @reconstructed_table[@row_indices[current_row]][@column_indices[current_column]] = target_cell.note.note_text
       end
     end

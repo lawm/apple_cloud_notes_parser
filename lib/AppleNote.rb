@@ -169,11 +169,11 @@ class AppleNote
                                                                     row["ZTYPEUTI"],
                                                                     self,
                                                                     @backup)
-              when "com.apple.notes.table"
-                tmp_embedded_object = AppleNotesEmbeddedTable.new(row["Z_PK"],
-                                                                  row["ZIDENTIFIER"],
-                                                                  row["ZTYPEUTI"],
-                                                                  self)
+              #when "com.apple.notes.table"
+              #  tmp_embedded_object = AppleNotesEmbeddedTable.new(row["Z_PK"],
+              #                                                    row["ZIDENTIFIER"],
+              #                                                    row["ZTYPEUTI"],
+              #                                                    self)
               when "com.apple.drawing.2"
                 tmp_embedded_object = AppleNotesEmbeddedDrawing.new(row["Z_PK"],
                                                                     row["ZIDENTIFIER"],
